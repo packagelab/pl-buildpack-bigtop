@@ -10,6 +10,7 @@ scriptname=$(basename $0)
 cat <<EOT
 ---
 packages:
+  - ant
   - autoconf
   - automake
   - build-essential
