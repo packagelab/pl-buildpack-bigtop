@@ -34,8 +34,6 @@ main() {
   mv $build_dir/.local/gradle-2.1 $build_dir/.local/gradle
   cd - >/dev/null 2>&1  
 
-  export GRADLE_USER_HOME=$cache_dir/gradle
-  export MAVEN_OPTS=-Dmaven.repo.local=$cache_dir/m2/repository
   export HOME=$cache_dir
   export PATH=$build_dir/.local/gradle/bin:$PATH
 
