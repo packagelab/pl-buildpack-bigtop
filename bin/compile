@@ -35,6 +35,7 @@ main() {
   cd - >/dev/null 2>&1  
 
   export HOME=$cache_dir
+  export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
   export PATH=$build_dir/.local/gradle/bin:$PATH
 
   echo "-----> Building packages"
