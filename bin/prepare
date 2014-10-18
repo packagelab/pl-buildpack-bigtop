@@ -29,6 +29,7 @@ packages:
   - libxml2-dev
   - libxslt1-dev
   - libzip-dev
+  - openjdk-7-jdk
   - python-dev
   - python-setuptools
   - sharutils

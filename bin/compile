@@ -26,6 +26,16 @@ main() {
   local build_dir="$1"
   local cache_dir="$2"
 
+  echo "-----> Installing gradle"
+  cd $build_dir >/dev/null 2>&1
+  curl -fsLS -o /tmp/gradle-2.1-bin.zip https://services.gradle.org/distributions/gradle-2.1-bin.zip
+  mkdir -p $build_dir/.local
+  unzip -d $build_dir/.local /tmp/gradle-2.1-bin.zip
+  mv $build_dir/.local/gradle-2.1 $build_dir/.local/gradle
+  cd - >/dev/null 2>&1  
+
+  export PATH=$build_dir/.local/gradle/bin:$PATH
+
   echo "-----> Building packages"
   cd $build_dir >/dev/null 2>&1
   make zookeeper-deb
