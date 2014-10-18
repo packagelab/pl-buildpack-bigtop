@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# fail fast
+set -o errexit
+set -o nounset
+set -o pipefail
+
+usage() {
+  echo "compile: usage: compile BUILD_DIR CACHE_DIR"
+}
+
+indent() {
+  local c='s/^/       /'
+  case $(uname) in
+    Darwin) sed -l "$c";;
+    *) sed -u "$c";;
+  esac
+}
+
+main() {
+  case $# in
+    2) :;;
+    *) usage >&2; exit 2;;
+  esac
+
+  local build_dir="$1"
+  local cache_dir="$2"
+
+  echo "-----> Building packages"
+  cd $build_dir >/dev/null 2>&1
+  make zookeeper-deb
+  cd - >/dev/null 2>&1
+}
+
+case "$0" in
+  "$BASH_SOURCE") main "$@";;
+esac

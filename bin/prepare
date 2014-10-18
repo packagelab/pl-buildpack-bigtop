@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# fail fast
+set -o errexit
+set -o nounset
+set -o pipefail
+
+scriptname=$(basename $0)
+
+cat <<EOT
+---
+packages:
+  - autoconf
+  - automake
+  - build-essential
+  - debhelper
+  - devscripts
+  - dh-make
+  - fuse
+  - libfuse-dev
+  - libkrb5-dev
+  - libldap2-dev
+  - liblzo2-dev
+  - libmysqlclient-dev
+  - libtool
+  - libsasl2-dev
+  - libsqlite3-dev
+  - libssl-dev
+  - libxml2-dev
+  - libxslt1-dev
+  - libzip-dev
+  - python-dev
+  - python-setuptools
+  - sharutils
+  - xmlto
+EOT

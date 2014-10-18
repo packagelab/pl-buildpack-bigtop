@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# fail fast
+set -o errexit
+set -o nounset
+set -o pipefail
+
+scriptname=$(basename $0)
+case $# in
+  1) :;;
+  *) echo "$scriptname: usage: $scriptname BUILD_DIR" >&2; exit 2;;
+esac
+
+build_dir="$1"
+
+if [ -d $build_dir/bigtop-packages ]
+then
+  echo 'Apache Bigtop'
+  exit 0
+fi
+
+exit 1
