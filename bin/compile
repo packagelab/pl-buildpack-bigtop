@@ -51,6 +51,7 @@ main() {
     datafu-deb \
     sqoop-deb \
     solr-deb \
+    hadoop-deb \
     2>&1 | indent
   cd - >/dev/null 2>&1
 }
