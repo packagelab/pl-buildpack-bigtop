@@ -14,6 +14,7 @@ packages:
   - autoconf
   - automake
   - build-essential
+  - cmake
   - debhelper
   - devscripts
   - dh-make
@@ -33,6 +34,7 @@ packages:
   - libzip-dev
   - maven
   - openjdk-7-jdk
+  - pkg-config
   - python-dev
   - python-setuptools
   - sharutils
