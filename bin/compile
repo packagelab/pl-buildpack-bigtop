@@ -47,7 +47,7 @@ EOT
 
   echo "-----> Building packages"
   cd $build_dir >/dev/null 2>&1
-  gradle zookeeper-deb bigtop-utils-deb 2>&1 | indent
+  gradle zookeeper-deb bigtop-utils-deb whirr-deb 2>&1 | indent
   cd - >/dev/null 2>&1
 }
 
