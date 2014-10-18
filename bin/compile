@@ -42,6 +42,7 @@ main() {
 </ivysettings>
 EOT
 
+  export GRADLE_USER_HOME=$cache_dir/gradle
   export MAVEN_OPTS=-Dmaven.repo.local=$cache_dir/m2/repository
   export PATH=$build_dir/.local/gradle/bin:$PATH
 
