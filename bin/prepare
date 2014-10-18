@@ -16,6 +16,7 @@ packages:
   - debhelper
   - devscripts
   - dh-make
+  - fakeroot
   - fuse
   - libfuse-dev
   - libkrb5-dev
