@@ -33,5 +33,6 @@ packages:
   - python-dev
   - python-setuptools
   - sharutils
+  - unzip
   - xmlto
 EOT
