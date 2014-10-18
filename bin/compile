@@ -38,7 +38,7 @@ main() {
 
   echo "-----> Building packages"
   cd $build_dir >/dev/null 2>&1
-  make zookeeper-deb
+  gradle zookeeper-deb
   cd - >/dev/null 2>&1
 }
 
