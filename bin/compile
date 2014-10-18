@@ -39,7 +39,7 @@ main() {
 
   echo "-----> Building packages"
   cd $build_dir >/dev/null 2>&1
-  gradle zookeeper-deb
+  gradle hadoop-deb zookeeper-deb
   cd - >/dev/null 2>&1
 }
 
