@@ -35,6 +35,7 @@ packages:
   - maven
   - openjdk-7-jdk
   - pkg-config
+  - protobuf-compiler
   - python-dev
   - python-setuptools
   - sharutils
