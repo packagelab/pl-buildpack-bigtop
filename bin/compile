@@ -30,7 +30,7 @@ main() {
   cd $build_dir >/dev/null 2>&1
   curl -fsLS -o /tmp/gradle-2.1-bin.zip https://services.gradle.org/distributions/gradle-2.1-bin.zip
   mkdir -p $build_dir/.local
-  unzip -d $build_dir/.local /tmp/gradle-2.1-bin.zip
+  unzip -q -d $build_dir/.local /tmp/gradle-2.1-bin.zip
   mv $build_dir/.local/gradle-2.1 $build_dir/.local/gradle
   cd - >/dev/null 2>&1  
 
