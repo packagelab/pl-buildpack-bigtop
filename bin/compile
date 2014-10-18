@@ -34,6 +34,14 @@ main() {
   mv $build_dir/.local/gradle-2.1 $build_dir/.local/gradle
   cd - >/dev/null 2>&1  
 
+  echo "-----> Creating ivysettings.xml"
+  mkdir -p $HOME/.ivy2
+  cat <<EOT >$HOME/.ivy2/ivysettings.xml
+<ivysettings>
+  <caches defaultCacheDir="$cache_dir/ivy2/cache"/>
+</ivysettings>
+EOT
+
   export MAVEN_OPTS=-Dmaven.repo.local=$cache_dir/m2/repository
   export PATH=$build_dir/.local/gradle/bin:$PATH
 
